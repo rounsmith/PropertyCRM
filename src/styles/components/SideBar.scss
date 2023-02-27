@@ -1,0 +1,72 @@
+@import '../common/vars';
+
+.sidebar-wrapper {
+  height: calc(100vh - 150px);
+  display: flex;
+  flex-direction: column;
+  padding: 25px 16px;
+  background-color: $white;
+  width: 250px;
+
+  .sidebar-item {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 16px 23px;
+    transition: all ease 0.5s;
+    border-radius: 12px;
+
+    &:hover {
+      cursor: pointer;
+      // background-color: $hover-text-color;
+
+      span {
+        color: $hover-text-color;
+      }
+
+      svg {
+        path {
+          fill: $hover-text-color;
+        }
+      }
+    }
+
+    svg {
+      path {
+        fill: $secondary-text-color;
+      }
+    }
+    span {
+      color: $secondary-text-color;
+      font-size: 16px;
+      transition: all ease 0.3s;
+    }
+  }
+
+  .active {
+    background-color: $hover-text-color;
+
+    span {
+      color: $white;
+    }
+
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+
+    &:hover {
+      span {
+        color: $white;
+      }
+
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
+  }
+}

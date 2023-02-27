@@ -1,0 +1,41 @@
+@import '../common/vars';
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 25px;
+
+  .card {
+    display: flex;
+    justify-content: space-between;
+    gap: 13px;
+    background-color: $white;
+    width: 340px;
+    height: 108px;
+    padding: 24px 22px;
+    border-radius: 15px;
+
+    .card-left-section {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .card-text {
+        font-size: 16px;
+        color: $secondary-text-color;
+      }
+
+      .card-totals {
+        font-size: 34px;
+        font-weight: 700;
+        color: $primary-text-color;
+      }
+    }
+
+    .card-right-section {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

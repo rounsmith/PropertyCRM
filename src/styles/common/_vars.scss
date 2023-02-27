@@ -1,0 +1,22 @@
+//custom color for components
+
+//white theme
+$white: #fcfcfc;
+$background: #f4f4f4;
+$primary-text-color: #11142d;
+$secondary-text-color: #808191;
+$notification-red: #eb5757;
+$hover-text-color: #475be8;
+$border-color: #e4e4e4;
+
+@mixin for-phone-only {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-only {
+  @media (min-width: 992px) {
+    @content;
+  }
+}

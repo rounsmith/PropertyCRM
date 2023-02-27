@@ -1,0 +1,114 @@
+@import '../common/vars.scss';
+
+.notifications {
+  all: unset;
+  position: relative;
+  padding-right: 12px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  .bell-icon {
+    color: $secondary-text-color;
+  }
+
+  .red-icon {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: $notification-red;
+    top: 1px;
+    right: 16px;
+  }
+}
+
+.notifications-content {
+  margin-top: 35px;
+  background: $white;
+  box-shadow: 0px 40px 50px 1px rgba(120, 114, 114, 0.15);
+  border-radius: 10px;
+  width: 411px;
+  max-height: 705px;
+  overflow: auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+
+  .notification {
+    all: unset;
+    display: flex;
+    max-height: 113px;
+    gap: 10px;
+    padding: 20px 0px;
+    position: relative;
+    margin-bottom: 20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $border-color;
+      top: -10px;
+    }
+
+    &:first-child {
+      &::after {
+        content: none;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: whitesmoke;
+      border-radius: 5px;
+    }
+
+    .notification-icon {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      color: $white;
+    }
+
+    .notification-icon-green {
+      background-color: #38b259;
+    }
+
+    .notification-icon-blue {
+      background-color: #006ce4;
+    }
+
+    .notification-icon-red {
+      background-color: #ec4e2c;
+    }
+
+    .notification-info {
+      color: $primary-text-color;
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+
+      .notification-title {
+        font-size: 14px;
+        padding-bottom: 4px;
+      }
+
+      .notification-description {
+        color: $secondary-text-color;
+        font-size: 12px;
+        line-height: 18px;
+        padding-bottom: 8px;
+      }
+
+      .notification-time {
+        font-size: 14px;
+      }
+    }
+  }
+}

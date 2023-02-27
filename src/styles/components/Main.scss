@@ -1,0 +1,12 @@
+@import '../common/vars';
+
+.main-wrapper {
+  width: 100%;
+  background-color: $background;
+  overflow: auto;
+  padding: 28px 25px 20px 25px;
+
+  h1 {
+    font-size: 25px;
+  }
+}
