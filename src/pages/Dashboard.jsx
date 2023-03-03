@@ -1,7 +1,7 @@
 import Card from '../components/Dashboard/Card';
 import TotalRevenue from '../components/Dashboard/TotalRevenue/TotalRevenue';
+import PropertyReferrals from '../components/Dashboard/PropertyReferrals/PropertyReferrals';
 
-import '../styles/components/Card.scss';
 import '../styles/components/Dashboard.scss';
 
 const Dashboard = () => {
@@ -29,12 +29,15 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-wrapper">
-      <div className="cards">
+      <div className="top-dashboard-section">
         {cards.map((item) => (
           <Card data={item} key={item.title} />
         ))}
       </div>
-      <TotalRevenue />
+      <div className="mid-dashboard-section">
+        <TotalRevenue />
+        <PropertyReferrals />
+      </div>
     </div>
   );
 };

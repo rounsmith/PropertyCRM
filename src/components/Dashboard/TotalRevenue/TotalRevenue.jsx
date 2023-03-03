@@ -42,7 +42,7 @@ const TotalRevenue = () => {
         </div>
       </div>
 
-      <div style={{ height: '60%', width: '100%' }}>
+      <div className="barchart">
         <BarChart />
       </div>
     </div>

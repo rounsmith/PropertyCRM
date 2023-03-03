@@ -1,11 +1,10 @@
 @import '../common/vars';
 
 .total-revenue {
-  width: 70%;
-  height: 363px;
+  flex: 4;
   background-color: $white;
   border-radius: 15px;
-  padding: 15px;
+  padding: 20px;
 
   .topData {
     height: 40%;
@@ -91,5 +90,10 @@
         }
       }
     }
+  }
+
+  .barchart {
+    height: 60%;
+    width: 100%;
   }
 }

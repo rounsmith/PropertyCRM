@@ -5,10 +5,15 @@
   flex-direction: column;
   gap: 25px;
 
-  .cards {
+  .top-dashboard-section {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     gap: 25px;
+  }
+
+  .mid-dashboard-section {
+    display: flex;
+    gap: 20px;
   }
 }

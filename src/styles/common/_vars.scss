@@ -8,6 +8,7 @@ $secondary-text-color: #808191;
 $notification-red: #eb5757;
 $hover-text-color: #475be8;
 $border-color: #e4e4e4;
+$bar-gray: #e4e8ef;
 
 @mixin for-phone-only {
   @media (max-width: 991px) {
