@@ -1,4 +1,4 @@
-import '../../styles/components/Card.scss';
+import '../../../styles/components/Card.scss';
 import DougnutChart from './DougnutChart';
 
 const Card = ({ data }) => {

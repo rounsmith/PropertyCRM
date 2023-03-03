@@ -1,6 +1,8 @@
 import Card from '../components/Dashboard/Card';
+import TotalRevenue from '../components/Dashboard/TotalRevenue/TotalRevenue';
 
 import '../styles/components/Card.scss';
+import '../styles/components/Dashboard.scss';
 
 const Dashboard = () => {
   const cards = [
@@ -26,10 +28,13 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="cards">
-      {cards.map((item) => (
-        <Card data={item} key={item.title} />
-      ))}
+    <div className="dashboard-wrapper">
+      <div className="cards">
+        {cards.map((item) => (
+          <Card data={item} key={item.title} />
+        ))}
+      </div>
+      <TotalRevenue />
     </div>
   );
 };
