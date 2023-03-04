@@ -1,6 +1,7 @@
 import Card from '../components/Dashboard/Card';
 import TotalRevenue from '../components/Dashboard/TotalRevenue/TotalRevenue';
 import PropertyReferrals from '../components/Dashboard/PropertyReferrals/PropertyReferrals';
+import PropertyList from '../components/Dashboard/PropertyList/PropertyList';
 
 import '../styles/components/Dashboard.scss';
 
@@ -37,6 +38,9 @@ const Dashboard = () => {
       <div className="mid-dashboard-section">
         <TotalRevenue />
         <PropertyReferrals />
+      </div>
+      <div className="bottom-dashboard-section">
+        <PropertyList />
       </div>
     </div>
   );

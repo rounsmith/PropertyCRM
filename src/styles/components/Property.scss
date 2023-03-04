@@ -1,0 +1,50 @@
+@import '../common/vars';
+
+.property-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 329px;
+  gap: 10px;
+
+  .property-image {
+    border-radius: 10px;
+    width: 326px;
+    object-fit: contain;
+  }
+
+  .property-description {
+    display: flex;
+    justify-content: space-between;
+
+    .property-description-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      .property-name {
+        font-size: 16px;
+        font-weight: 600;
+        color: $primary-text-color;
+      }
+
+      .property-location {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+
+        span {
+          color: $secondary-text-color;
+        }
+      }
+    }
+
+    .property-price {
+      padding: 7px 9px;
+      background-color: $secondary-color;
+      color: $hover-text-color;
+      border-radius: 4px;
+      height: fit-content;
+      font-size: 12px;
+    }
+  }
+}
