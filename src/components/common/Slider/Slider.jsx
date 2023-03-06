@@ -10,6 +10,7 @@ const CustomSlider = ({ children }) => {
     slidesToScroll: 4,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    className: 'custom-slick-list',
   };
 
   return <Slider {...settings}>{children}</Slider>;

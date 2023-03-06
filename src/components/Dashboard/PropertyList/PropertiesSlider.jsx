@@ -1,11 +1,49 @@
 import React from 'react';
-import Slider from 'react-slick';
 import { MdLocationOn } from 'react-icons/md';
 
-import '../../../styles/components/Property.scss';
 import CustomSlider from '../../common/Slider/Slider';
 
-const PropertiesSlider = ({ properties }) => {
+import '../../../styles/components/Property.scss';
+
+const PropertiesSlider = () => {
+  const properties = [
+    {
+      id: 1,
+      img: './property1.jpg',
+    name: 'Star Sun Hotel & Apartment',
+      location: 'North Carolina, USA',
+      value: '$500',
+    },
+    {
+      id: 2,
+      img: './property2.jpg',
+      name: 'Letdo Ji Hotel & Apartment',
+      location: 'New York City, USA',
+      value: '$500',
+    },
+    {
+      id: 3,
+      img: './property3.jpg',
+      name: 'Metro Jayakar Apartment',
+      location: 'North Carolina, USA',
+      value: '$500',
+    },
+    {
+      id: 4,
+      img: './property3.jpg',
+      name: 'Metro Jayakar Apartment',
+      location: 'North Carolina, USA',
+      value: '$500',
+    },
+    {
+      id: 5,
+      img: './property3.jpg',
+      name: 'Metro Jayakar Apartment',
+      location: 'North Carolina, USA',
+      value: '$500',
+    },
+  ];
+
   return (
     <CustomSlider>
       {properties.map((property) => (

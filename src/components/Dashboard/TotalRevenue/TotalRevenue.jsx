@@ -1,5 +1,6 @@
-import '../../../styles/components/TotalRevenue.scss';
 import BarChart from './BarChart';
+
+import '../../../styles/components/TotalRevenue.scss';
 
 const TotalRevenue = () => {
   return (

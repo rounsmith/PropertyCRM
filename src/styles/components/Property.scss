@@ -1,14 +1,14 @@
 @import '../common/vars';
 
 .property-wrapper {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
-  max-width: 329px;
+  padding-right: 10px;
   gap: 10px;
 
   .property-image {
     border-radius: 10px;
-    width: 326px;
+    // width: 326px;
     object-fit: contain;
   }
 

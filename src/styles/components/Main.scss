@@ -4,7 +4,23 @@
   width: 100%;
   background-color: $background;
   overflow: auto;
+  height: calc(100vh - 150px);
   padding: 28px 15px 20px 25px;
+  margin: 0 3px;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-text-color;
+    outline: 0 solid transparent;
+    border-radius: 10px;
+  }
 
   h1 {
     font-size: 25px;

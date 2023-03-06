@@ -1,4 +1,14 @@
-@import '../../../styles//common/vars';
+@import '../../../styles/common/vars';
+
+.custom-slick-list {
+  .slick-list {
+    margin: 0 50px;
+
+    .slick-slide > div {
+      padding: 0 12px;
+    }
+  }
+}
 
 .prevArrow {
   width: 38px !important;
@@ -9,6 +19,49 @@
   display: flex !important;
   justify-content: center;
   align-items: center;
+  left: 0 !important;
+
+  &::before {
+    content: '' !important;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.prevArrow {
+  width: 38px !important;
+  height: 38px !important;
+  background-color: $white;
+  box-shadow: 0px 6px 11px rgba(133, 123, 123, 0.1);
+  border-radius: 20px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  left: 0 !important;
+
+  &::before {
+    content: '' !important;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.nextArrow {
+  width: 38px !important;
+  height: 38px !important;
+  background-color: $white;
+  box-shadow: 0px 6px 11px rgba(133, 123, 123, 0.1);
+  border-radius: 20px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  right: 0 !important;
 
   &::before {
     content: '' !important;

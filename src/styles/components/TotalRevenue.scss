@@ -8,9 +8,16 @@
 
   .topData {
     height: 40%;
+
     .top {
       display: flex;
       justify-content: space-between;
+
+      @include for-phone-only {
+        gap: 15px;
+        flex-direction: column;
+        font-size: 12px;
+      }
 
       .title {
         color: $primary-text-color;

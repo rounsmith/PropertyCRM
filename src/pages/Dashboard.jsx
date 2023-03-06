@@ -9,7 +9,7 @@ const Dashboard = () => {
   const cards = [
     {
       title: 'Properties For Sale',
-      number1: 684,
+    number1: 684,
       number2: 316,
       colorToFill: '#475BE8',
     },

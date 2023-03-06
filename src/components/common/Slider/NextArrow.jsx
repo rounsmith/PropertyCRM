@@ -4,11 +4,9 @@ import './ArrowStyles.scss';
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
-    <div
-      className={className}
-      style={{ ...style, display: 'block', background: 'red' }}
-      onClick={onClick}
-    />
+    <div className={`${className} nextArrow`} onClick={onClick}>
+      <img src="/arrow-right.png" alt="left-arrow" />
+    </div>
   );
 };
 
