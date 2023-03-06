@@ -1,13 +1,8 @@
-import { useRef, useState } from 'react';
-
-import Property from './Property';
+import PropertiesSlider from './PropertiesSlider';
 
 import '../../../styles/components/PropertyList.scss';
 
 const PropertyList = () => {
-  const propertiesRef = useRef();
-  const [activeItems, setActiveItems] = useState(4);
-
   const properties = [
     {
       id: 1,
@@ -46,8 +41,6 @@ const PropertyList = () => {
     },
   ];
 
-  const handleBackSlider = () => {};
-  const handleNextSlider = () => {};
   return (
     <div className="property-list-wrapper">
       <div className="topData">
@@ -68,7 +61,7 @@ const PropertyList = () => {
         </div>
       </div>
 
-      <div className="list-of-properties">
+      {/* <div className="list-of-properties">
         <div className="previous">
           <button
             type="button"
@@ -94,7 +87,9 @@ const PropertyList = () => {
             &#62;
           </button>
         </div>
-      </div>
+      </div> */}
+
+      <PropertiesSlider properties={properties} />
     </div>
   );
 };
