@@ -1,12 +1,26 @@
+import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
+import useWindowSize from '../../libs/windowSize';
+import { selectSidebarShown } from '../../store/reducers/globals';
+
 import '../../styles/components/SideBar.scss';
 
 const SideBar = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const { width } = useWindowSize();
+  const sideBarShow = useSelector(selectSidebarShown);
 
   return (
-    <div className="sidebar-wrapper">
+    <div
+      className={`${
+        width > 991
+          ? 'sidebar-wrapper'
+          : sideBarShow
+          ? ' sidebar-wrapper activeSidebar'
+          : 'hiddenSidebar'
+      }`}
+    >
       <button
         type="button"
         onClick={() => navigate('/')}

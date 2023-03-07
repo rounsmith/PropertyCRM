@@ -10,8 +10,8 @@ function App() {
   return (
     <>
       <Header />
-      <div style={{ display: 'flex' }}>
-        {width > 991 && <SideBar />}
+      <div className="main">
+        <SideBar />
         <Main />
       </div>
     </>
