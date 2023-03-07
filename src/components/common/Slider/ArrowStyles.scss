@@ -4,6 +4,9 @@
   .slick-list {
     margin: 0 50px;
 
+    @include for-phone-only {
+      margin: 0 30px;
+    }
     .slick-slide > div {
       padding: 0 12px;
     }

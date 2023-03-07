@@ -6,6 +6,11 @@
   border-radius: 15px;
   padding: 20px;
 
+  @include for-phone-only {
+    flex: unset;
+    height: 373px;
+  }
+
   .topData {
     height: 40%;
 

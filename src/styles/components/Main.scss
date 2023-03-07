@@ -8,8 +8,16 @@
   padding: 28px 15px 20px 25px;
   margin: 0 3px;
 
+  @include for-phone-only {
+    margin: 0;
+  }
+
   &::-webkit-scrollbar {
     width: 6px;
+
+    @include for-phone-only {
+      display: none;
+    }
   }
 
   &::-webkit-scrollbar-track {

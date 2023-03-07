@@ -18,6 +18,12 @@ $bar-gray: #e4e8ef;
   }
 }
 
+@mixin for-320-phone-only {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
 @mixin for-desktop-only {
   @media (min-width: 992px) {
     @content;

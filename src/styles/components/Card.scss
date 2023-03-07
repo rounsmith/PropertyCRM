@@ -1,37 +1,37 @@
 @import '../common/vars';
 
+.card {
+  display: flex;
+  justify-content: space-between;
+  gap: 13px;
+  background-color: $white;
 
+  padding: 24px 22px;
+  border-radius: 15px;
 
-  .card {
+  .card-left-section {
     display: flex;
-    justify-content: space-between;
-    gap: 13px;
-    background-color: $white;
-    width: 340px;
-    height: 108px;
-    padding: 24px 22px;
-    border-radius: 15px;
+    flex-direction: column;
+    gap: 15px;
 
-    .card-left-section {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
+    .card-text {
+      font-size: 16px;
+      color: $secondary-text-color;
 
-      .card-text {
-        font-size: 16px;
-        color: $secondary-text-color;
-      }
-
-      .card-totals {
-        font-size: 34px;
-        font-weight: 700;
-        color: $primary-text-color;
+      @include for-phone-only {
+        font-size: 14px;
       }
     }
 
-    .card-right-section {
-      width: 100px;
-      height: 100px;
+    .card-totals {
+      font-size: 34px;
+      font-weight: 700;
+      color: $primary-text-color;
     }
   }
 
+  .card-right-section {
+    width: 100px;
+    height: 100px;
+  }
+}

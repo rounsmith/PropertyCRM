@@ -7,10 +7,14 @@
   padding-right: 10px;
 
   .top-dashboard-section {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 25px;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(385px, 1fr));
+
+    @include for-phone-only {
+      justify-content: center;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
   }
 
   .mid-dashboard-section {
