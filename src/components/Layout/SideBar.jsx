@@ -1,30 +1,19 @@
-import { useSelector } from 'react-redux';
 import { useLocation, useNavigate } from 'react-router-dom';
-import useWindowSize from '../../libs/windowSize';
-import { selectSidebarShown } from '../../store/reducers/globals';
 
-import '../../styles/components/SideBar.scss';
+import styles from '../../styles/components/SideBar.module.scss';
 
 const SideBar = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const { width } = useWindowSize();
-  const sideBarShow = useSelector(selectSidebarShown);
 
   return (
-    <div
-      className={`${
-        width > 991
-          ? 'sidebar-wrapper'
-          : sideBarShow
-          ? ' sidebar-wrapper activeSidebar'
-          : 'hiddenSidebar'
-      }`}
-    >
+    <div className={styles[`sidebar-wrapper`]}>
       <button
         type="button"
         onClick={() => navigate('/')}
-        className={`sidebar-item ${pathname === '/' ? 'active' : ''}`}
+        className={`${styles['sidebar-item']} ${
+          pathname === '/' ? styles['active'] : ''
+        }`}
       >
         <svg
           width="24"
@@ -32,7 +21,7 @@ const SideBar = () => {
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="sidebar-item-icon"
+          className={styles['sidebar-item-icon']}
         >
           <path
             fillRule="evenodd"
@@ -59,12 +48,14 @@ const SideBar = () => {
             fill="#808191"
           />
         </svg>
-        <span className="sidebar-item-text">Dashboard</span>
+        <span className={`${styles['sidebar-item-text']}`}>Dashboard</span>
       </button>
       <button
         type="button"
         onClick={() => navigate('/property')}
-        className={`sidebar-item ${pathname === '/property' ? 'active' : ''}`}
+        className={`${styles['sidebar-item']} ${
+          pathname === '/property' ? styles['active'] : ''
+        }`}
       >
         <svg
           width="20"
@@ -72,7 +63,7 @@ const SideBar = () => {
           viewBox="0 0 20 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="sidebar-item-icon"
+          className={styles['sidebar-item-icon']}
         >
           <path
             fillRule="evenodd"
@@ -81,12 +72,14 @@ const SideBar = () => {
             fill="#808191"
           />
         </svg>
-        <span className="sidebar-item-text">Property</span>
+        <span className={`${styles['sidebar-item-text']}`}>Property</span>
       </button>
       <button
         type="button"
         onClick={() => navigate('/agent')}
-        className={`sidebar-item ${pathname === '/agent' ? 'active' : ''}`}
+        className={`${styles['sidebar-item']} ${
+          pathname === '/agent' ? styles['active'] : ''
+        }`}
       >
         <svg
           width="24"
@@ -94,7 +87,7 @@ const SideBar = () => {
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="sidebar-item-icon"
+          className={styles['sidebar-item-icon']}
         >
           <path
             d="M14.4997 10.9691C16.473 10.7232 18 9.03992 18 7.00001C18 4.96009 16.473 3.27682 14.4997 3.03091C15.4334 4.08866 16 5.47817 16 7.00001C16 8.52185 15.4334 9.91136 14.4997 10.9691Z"
@@ -117,12 +110,14 @@ const SideBar = () => {
             fill="#808191"
           />
         </svg>
-        <span className="sidebar-item-text">Agent</span>
+        <span className={`${styles['sidebar-item-text']}`}>Agent</span>
       </button>
       <button
         type="button"
         onClick={() => navigate('/review')}
-        className={`sidebar-item ${pathname === '/review' ? 'active' : ''}`}
+        className={`${styles['sidebar-item']} ${
+          pathname === '/review' ? styles['active'] : ''
+        }`}
       >
         <svg
           width="24"
@@ -130,7 +125,7 @@ const SideBar = () => {
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="sidebar-item-icon"
+          className={styles['sidebar-item-icon']}
         >
           <path
             fillRule="evenodd"
@@ -139,12 +134,14 @@ const SideBar = () => {
             fill="#808191"
           />
         </svg>
-        <span className="sidebar-item-text">Review</span>
+        <span className={`${styles['sidebar-item-text']}`}>Review</span>
       </button>
       <button
         type="button"
         onClick={() => navigate('/message')}
-        className={`sidebar-item ${pathname === '/message' ? 'active' : ''}`}
+        className={`${styles['sidebar-item']} ${
+          pathname === '/message' ? styles['active'] : ''
+        }`}
       >
         <svg
           width="24"
@@ -152,7 +149,7 @@ const SideBar = () => {
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="sidebar-item-icon"
+          className={styles['sidebar-item-icon']}
         >
           <path
             fillRule="evenodd"
@@ -173,12 +170,14 @@ const SideBar = () => {
             fill="#808191"
           />
         </svg>
-        <span className="sidebar-item-text">Message</span>
+        <span className={`${styles['sidebar-item-text']}`}>Message</span>
       </button>
       <button
         type="button"
         onClick={() => navigate('/profile')}
-        className={`sidebar-item ${pathname === '/profile' ? 'active' : ''}`}
+        className={`${styles['sidebar-item']} ${
+          pathname === '/profile' ? styles['active'] : ''
+        }`}
       >
         <svg
           width="24"
@@ -186,7 +185,7 @@ const SideBar = () => {
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="sidebar-item-icon"
+          className={styles['sidebar-item-icon']}
         >
           <path
             fillRule="evenodd"
@@ -201,7 +200,7 @@ const SideBar = () => {
             fill="#808191"
           />
         </svg>
-        <span className="sidebar-item-text">My Profile</span>
+        <span className={`${styles['sidebar-item-text']}`}>My Profile</span>
       </button>
     </div>
   );

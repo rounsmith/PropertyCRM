@@ -5,13 +5,13 @@ html {
   font-family: 'Manrope', sans-serif;
 }
 
+/* *,
+*::before,
+*::after {
+  box-sizing: unset;
+} */
+
 .main {
   display: flex;
-}
-
-@media screen and (max-width: 991px) {
-  .main {
-    display: block;
-    position: relative;
-  }
+  height: calc(100vh - 70px);
 }

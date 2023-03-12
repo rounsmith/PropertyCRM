@@ -1,17 +1,21 @@
 import { AiOutlineSearch } from 'react-icons/ai';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import useWindowSize from '../../libs/windowSize';
 import ProfileDropdown from '../common/ProfileDropdown';
 import Notifications from '../common/Notifications';
-import { setSideBarShow } from '../../store/reducers/globals';
+import {
+  selectSidebarShown,
+  setSideBarShow,
+} from '../../store/reducers/globals';
 
-import '../../styles/components/Header.scss';
+import styles from '../../styles/components/Header.scss';
 
 const Header = () => {
   const { width, height } = useWindowSize();
   const dispatch = useDispatch();
+  const showSideBar = useSelector(selectSidebarShown);
 
   return (
     <header className="header-wrapper">
@@ -33,7 +37,7 @@ const Header = () => {
             <GiHamburgerMenu
               size={26}
               className="menu-icon"
-              onClick={() => dispatch(setSideBarShow(true))}
+              onClick={() => dispatch(setSideBarShow(!showSideBar))}
             />
             <AiOutlineSearch size={18} className="search-icon" />
           </div>

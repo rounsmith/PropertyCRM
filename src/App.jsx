@@ -11,7 +11,7 @@ function App() {
     <>
       <Header />
       <div className="main">
-        <SideBar />
+        {width > 991 && <SideBar />}
         <Main />
       </div>
     </>

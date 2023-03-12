@@ -4,6 +4,9 @@
   background-color: $white;
   padding: 20px;
   border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 
   @include for-320-phone-only {
     padding: 10px;

@@ -1,7 +1,6 @@
 @import '../common/vars';
 
 .header-wrapper {
-  width: calc(100% - 40px);
   height: 70px;
   background-color: $white;
   display: flex;
@@ -10,7 +9,6 @@
   padding: 15px 20px;
 
   @include for-phone-only {
-    width: calc(100% - 40px);
     padding: 16px 15px;
   }
 
@@ -30,12 +28,14 @@
 
     .logo {
       padding-right: 90px;
-      max-width: 174px;
+      height: 35px;
+      object-fit: contain;
     }
 
     .search-wrapper {
       display: flex;
       align-items: center;
+      gap: 3px;
       width: 405px;
       height: 38px;
       padding: 10px;
@@ -44,7 +44,6 @@
 
       .search-icon {
         color: $secondary-text-color;
-        padding-right: 10px;
       }
 
       .search-input {
