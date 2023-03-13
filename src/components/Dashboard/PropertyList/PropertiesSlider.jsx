@@ -3,14 +3,14 @@ import { MdLocationOn } from 'react-icons/md';
 
 import CustomSlider from '../../common/Slider/Slider';
 
-import '../../../styles/components/Property.scss';
+import styles from '../../../styles/components/Property.module.scss';
 
 const PropertiesSlider = () => {
   const properties = [
     {
       id: 1,
       img: './property1.jpg',
-    name: 'Star Sun Hotel & Apartment',
+      name: 'Star Sun Hotel & Apartment',
       location: 'North Carolina, USA',
       value: '$500',
     },
@@ -47,21 +47,21 @@ const PropertiesSlider = () => {
   return (
     <CustomSlider>
       {properties.map((property) => (
-        <div className="property-wrapper" key={property.id}>
+        <div className={styles['property-wrapper']} key={property.id}>
           <img
-            className="property-image"
+            className={styles['property-image']}
             src={property.img}
             alt="property-name"
           />
-          <div className="property-description">
-            <div className="property-description-wrapper">
-              <span className="property-name">{property.name}</span>
-              <div className="property-location">
+          <div className={styles['property-description']}>
+            <div className={styles['property-description-wrapper']}>
+              <span className={styles['property-name']}>{property.name}</span>
+              <div className={styles['property-location']}>
                 <MdLocationOn size={20} />
                 <span>{property.location}</span>
               </div>
             </div>
-            <div className="property-price">{property.value}</div>
+            <div className={styles['property-price']}>{property.value}</div>
           </div>
         </div>
       ))}

@@ -2,6 +2,8 @@ import Slider from 'react-slick';
 import NextArrow from './NextArrow';
 import PrevArrow from './PrevArrow';
 
+import styles from './ArrowStyles.module.scss';
+
 const CustomSlider = ({ children }) => {
   const settings = {
     infinite: true,
@@ -10,7 +12,7 @@ const CustomSlider = ({ children }) => {
     slidesToScroll: 4,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    className: 'custom-slick-list',
+    className: `${styles['custom-slick-list']}`,
     responsive: [
       {
         breakpoint: 1600,

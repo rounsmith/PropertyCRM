@@ -1,27 +1,27 @@
 import BarChart from './BarChart';
 
-import '../../../styles/components/TotalRevenue.scss';
+import styles from '../../../styles/components/TotalRevenue.module.scss';
 
 const TotalRevenue = () => {
   return (
-    <div className="total-revenue">
-      <div className="topData">
-        <div className="top">
-          <div className="title">Total Revenue</div>
-          <div className="bar-colors">
-            <div className="last-month">
-              <div className="color" />
+    <div className={styles['total-revenue']}>
+      <div className={styles['topData']}>
+        <div className={styles['top']}>
+          <div className={styles['title']}>Total Revenue</div>
+          <div className={styles['bar-colors']}>
+            <div className={styles['last-month']}>
+              <div className={styles['color']} />
               <span>Last Month</span>
             </div>
-            <div className="running-month">
-              <div className="color" />
+            <div className={styles['running-month']}>
+              <div className={styles['color']} />
               <span>Running Month</span>
             </div>
           </div>
         </div>
-        <div className="total-revenue-numbers">
+        <div className={styles['total-revenue-numbers']}>
           <span>$236.535</span>
-          <div className="percentage">
+          <div className={styles['percentage']}>
             <svg
               width="20"
               height="20"
@@ -35,7 +35,7 @@ const TotalRevenue = () => {
                 fill="#FCFCFC"
               />
             </svg>
-            <div className="number">
+            <div className={styles['number']}>
               <span>0.8%</span>
               <span>Than last Month</span>
             </div>
@@ -43,7 +43,7 @@ const TotalRevenue = () => {
         </div>
       </div>
 
-      <div className="barchart">
+      <div className={styles['barchart']}>
         <BarChart />
       </div>
     </div>

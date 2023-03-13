@@ -10,7 +10,7 @@ import {
   setSideBarShow,
 } from '../../store/reducers/globals';
 
-import styles from '../../styles/components/Header.scss';
+import styles from '../../styles/components/Header.module.scss';
 
 const Header = () => {
   const { width, height } = useWindowSize();
@@ -18,32 +18,32 @@ const Header = () => {
   const showSideBar = useSelector(selectSidebarShown);
 
   return (
-    <header className="header-wrapper">
-      <div className="header-left-section">
+    <header className={styles['header-wrapper']}>
+      <div className={styles['header-left-section']}>
         {width > 991 ? (
           <>
-            <img src="/logo.png" className="logo" alt="logo" />
-            <div className="search-wrapper">
-              <AiOutlineSearch size={20} className="search-icon" />
+            <img src="/logo.png" className={styles['logo']} alt="logo" />
+            <div className={styles['search-wrapper']}>
+              <AiOutlineSearch size={20} className={styles['search-icon']} />
               <input
                 type="text"
                 placeholder="Search Property,Customer etc"
-                className="search-input"
+                className={styles['search-input']}
               />
             </div>
           </>
         ) : (
-          <div className="mobile-menu">
+          <div className={styles['mobile-menu']}>
             <GiHamburgerMenu
               size={26}
-              className="menu-icon"
+              className={styles['menu-icon']}
               onClick={() => dispatch(setSideBarShow(!showSideBar))}
             />
-            <AiOutlineSearch size={18} className="search-icon" />
+            <AiOutlineSearch size={18} className={styles['search-icon']} />
           </div>
         )}
       </div>
-      <div className="header-right-section">
+      <div className={styles['header-right-section']}>
         <Notifications height={height} />
         <ProfileDropdown width={width} />
       </div>

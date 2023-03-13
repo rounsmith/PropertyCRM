@@ -1,10 +1,10 @@
 import React from 'react';
-import './ArrowStyles.scss';
+import styles from './ArrowStyles.module.scss';
 
 const NextArrow = (props) => {
   const { className, style, onClick } = props;
   return (
-    <div className={`${className} nextArrow`} onClick={onClick}>
+    <div className={`${className} ${styles['nextArrow']}`} onClick={onClick}>
       <img src="/arrow-right.png" alt="left-arrow" />
     </div>
   );

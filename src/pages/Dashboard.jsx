@@ -3,13 +3,13 @@ import TotalRevenue from '../components/Dashboard/TotalRevenue/TotalRevenue';
 import PropertyReferrals from '../components/Dashboard/PropertyReferrals/PropertyReferrals';
 import PropertyList from '../components/Dashboard/PropertyList/PropertyList';
 
-import '../styles/components/Dashboard.scss';
+import styles from '../styles/components/Dashboard.module.scss';
 
 const Dashboard = () => {
   const cards = [
     {
       title: 'Properties For Sale',
-    number1: 684,
+      number1: 684,
       number2: 316,
       colorToFill: '#475BE8',
     },
@@ -29,17 +29,17 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className="dashboard-wrapper">
-      <div className="top-dashboard-section">
+    <div className={styles['dashboard-wrapper']}>
+      <div className={styles['top-dashboard-section']}>
         {cards.map((item) => (
           <Card data={item} key={item.title} />
         ))}
       </div>
-      <div className="mid-dashboard-section">
+      <div className={styles['mid-dashboard-section']}>
         <TotalRevenue />
         <PropertyReferrals />
       </div>
-      <div className="bottom-dashboard-section">
+      <div className={styles['bottom-dashboard-section']}>
         <PropertyList />
       </div>
     </div>
