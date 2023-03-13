@@ -17,7 +17,7 @@ const ProfileDropdown = ({ width }) => {
             alt="avatar"
           />
           {width > 992 && (
-            <div className="profile-text">
+            <div className={styles['profile-text']}>
               <span className={styles['name']}>Hawkins Maru</span>
               <span className={styles['company-position']}>
                 Company Manager

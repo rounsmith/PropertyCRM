@@ -37,13 +37,12 @@
 .profile-dropdown {
   display: flex;
   background-color: $white;
-  margin-top: 25px;
+  margin-top: 10px;
   padding: 10px;
   flex-direction: column;
   justify-content: space-between;
   border-radius: 10px;
   width: 192px;
-  height: 168px;
   box-shadow: 0px 40px 50px 1px rgba(120, 114, 114, 0.15);
 
   @include for-phone-only {
@@ -59,6 +58,7 @@
     display: flex;
     align-items: center;
     transition: all ease 0.3s;
+    color: $primary-text-color;
 
     &:hover {
       cursor: pointer;
