@@ -9,6 +9,10 @@
   padding: 20px;
   gap: 20px;
 
+  @include for-320-phone-only {
+    padding: 10px;
+  }
+
   .title {
     font-size: 18px;
     font-weight: 600;

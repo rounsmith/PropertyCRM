@@ -9,6 +9,7 @@
   @include for-phone-only {
     flex: unset;
     height: 373px;
+    padding: 10px;
   }
 
   .topData {
@@ -34,6 +35,10 @@
         display: flex;
         gap: 40px;
         padding-right: 30px;
+
+        @include for-320-phone-only {
+          padding: 0;
+        }
 
         .color {
           width: 13px;
@@ -71,11 +76,17 @@
     display: flex;
     padding: 20px 0 40px 0;
     gap: 38px;
-
+    @include for-320-phone-only {
+      padding-top: 10px;
+    }
     span {
       color: $primary-text-color;
       font-size: 28px;
       font-weight: 700;
+
+      @include for-320-phone-only {
+        font-size: 22px;
+      }
     }
 
     .percentage {
@@ -89,6 +100,9 @@
 
         span {
           font-size: 15px;
+          @include for-320-phone-only {
+            font-size: 12px;
+          }
 
           &:first-child {
             color: $hover-text-color;

@@ -20,7 +20,11 @@
   display: flex !important;
   justify-content: center;
   align-items: center;
-  left: -50px !important;
+  left: -45px !important;
+
+  @include for-320-phone-only {
+    left: -37px !important;
+  }
 
   &::before {
     content: '' !important;
@@ -41,7 +45,11 @@
   display: flex !important;
   justify-content: center;
   align-items: center;
-  right: -40px !important;
+  right: -45px !important;
+
+  @include for-320-phone-only {
+    right: -37px !important;
+  }
 
   &::before {
     content: '' !important;

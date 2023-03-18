@@ -9,6 +9,10 @@
   padding: 24px 22px;
   border-radius: 15px;
 
+  @include for-320-phone-only {
+    padding: 12px;
+  }
+
   .card-left-section {
     display: flex;
     flex-direction: column;
@@ -27,6 +31,10 @@
       font-size: 34px;
       font-weight: 700;
       color: $primary-text-color;
+
+      @include for-320-phone-only {
+        font-size: 30px;
+      }
     }
   }
 

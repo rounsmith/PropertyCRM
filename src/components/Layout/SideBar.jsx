@@ -2,15 +2,22 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import styles from '../../styles/components/SideBar.module.scss';
 
-const SideBar = () => {
+const SideBar = ({ mobileBar, closeSideBar }) => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+
+  const handleClick = (route) => {
+    if (mobileBar) {
+      closeSideBar();
+    }
+    navigate(route);
+  };
 
   return (
     <div className={styles[`sidebar-wrapper`]}>
       <button
         type="button"
-        onClick={() => navigate('/')}
+        onClick={() => handleClick('/')}
         className={`${styles['sidebar-item']} ${
           pathname === '/' ? styles['active'] : ''
         }`}
@@ -52,7 +59,7 @@ const SideBar = () => {
       </button>
       <button
         type="button"
-        onClick={() => navigate('/property')}
+        onClick={() => handleClick('/property')}
         className={`${styles['sidebar-item']} ${
           pathname === '/property' ? styles['active'] : ''
         }`}
@@ -76,7 +83,7 @@ const SideBar = () => {
       </button>
       <button
         type="button"
-        onClick={() => navigate('/agent')}
+        onClick={() => handleClick('/agent')}
         className={`${styles['sidebar-item']} ${
           pathname === '/agent' ? styles['active'] : ''
         }`}
@@ -114,7 +121,7 @@ const SideBar = () => {
       </button>
       <button
         type="button"
-        onClick={() => navigate('/review')}
+        onClick={() => handleClick('/review')}
         className={`${styles['sidebar-item']} ${
           pathname === '/review' ? styles['active'] : ''
         }`}
@@ -138,7 +145,7 @@ const SideBar = () => {
       </button>
       <button
         type="button"
-        onClick={() => navigate('/message')}
+        onClick={() => handleClick('/message')}
         className={`${styles['sidebar-item']} ${
           pathname === '/message' ? styles['active'] : ''
         }`}
@@ -174,7 +181,7 @@ const SideBar = () => {
       </button>
       <button
         type="button"
-        onClick={() => navigate('/profile')}
+        onClick={() => handleClick('/profile')}
         className={`${styles['sidebar-item']} ${
           pathname === '/profile' ? styles['active'] : ''
         }`}

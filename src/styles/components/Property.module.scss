@@ -3,12 +3,11 @@
 .property-wrapper {
   display: flex !important;
   flex-direction: column;
-  padding-right: 10px;
   gap: 10px;
+  padding: 5px;
 
   .property-image {
     border-radius: 10px;
-    // width: 326px;
     object-fit: contain;
   }
 

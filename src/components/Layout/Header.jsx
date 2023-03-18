@@ -11,6 +11,7 @@ import {
 } from '../../store/reducers/globals';
 
 import styles from '../../styles/components/Header.module.scss';
+import MobileSlider from '../common/MobileSideBar';
 
 const Header = () => {
   const { width, height } = useWindowSize();
@@ -47,6 +48,7 @@ const Header = () => {
         <Notifications height={height} />
         <ProfileDropdown width={width} />
       </div>
+      {width < 991 && <MobileSlider />}
     </header>
   );
 };
