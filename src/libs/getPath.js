@@ -5,7 +5,7 @@ export const getPathNameTitle = (path) => {
     case '/profile':
       return 'Profile';
     case '/property':
-      return 'Property';
+      return '';
     case '/agent':
       return 'Agent';
     case '/review':

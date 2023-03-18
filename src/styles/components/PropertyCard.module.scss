@@ -1,0 +1,59 @@
+@import '../common/vars';
+
+.property-card-wrapper {
+  display: flex;
+  gap: 10px;
+
+  .property-image {
+    width: 201px;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  .property-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .property-price {
+      padding: 7px 10px;
+      background-color: $secondary-color;
+      color: $hover-text-color;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 5px;
+    }
+
+    .property-name {
+      font-weight: 600;
+    }
+
+    .property-location {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      color: $secondary-text-color;
+
+      span {
+        font-size: 14px;
+      }
+    }
+
+    .property-location-info {
+      display: flex;
+      gap: 12px;
+
+      .property-bedrooms {
+        display: flex;
+        color: $primary-text-color;
+        font-size: 12px;
+      }
+
+      .property-footage {
+        display: flex;
+        color: $primary-text-color;
+        font-size: 12px;
+      }
+    }
+  }
+}
