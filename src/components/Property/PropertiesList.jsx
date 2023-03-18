@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../styles/components/Properties.module.scss';
+import PropertyCard from './PropertyCard';
 const PropertiesList = () => {
   const properties = [
     {
@@ -93,7 +94,13 @@ const PropertiesList = () => {
       squareRoom: '28',
     },
   ];
-  return <div className={styles['properties-wrapper']}>Properties</div>;
+  return (
+    <div className={styles['properties-wrapper']}>
+      {properties.map((item) => (
+        <PropertyCard key={item.id} data={item} />
+      ))}
+    </div>
+  );
 };
 
 export default PropertiesList;

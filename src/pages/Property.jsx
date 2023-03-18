@@ -1,4 +1,5 @@
 import { AiOutlinePlus } from 'react-icons/ai';
+import Pagination from '../components/common/Pagination';
 
 import Filters from '../components/Property/Filters';
 import PropertiesList from '../components/Property/PropertiesList';
@@ -22,6 +23,7 @@ const Property = () => {
       <div className={styles['properties-list']}>
         <Filters />
         <PropertiesList />
+        <Pagination />
       </div>
     </div>
   );
