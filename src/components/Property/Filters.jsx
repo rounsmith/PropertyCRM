@@ -1,8 +1,9 @@
 import Select from 'react-select';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-import styles from '../../styles/components/Filters.module.scss';
 import SelectAutoComplete from '../common/SelectAutoComplete/SelectAutoComplete';
+
+import styles from '../../styles/components/Filters.module.scss';
 
 const Filters = () => {
   const options = [

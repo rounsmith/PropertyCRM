@@ -2,7 +2,14 @@
 
 .filters-wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+
+  @include for-phone-only {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-gap: 10px;
+  }
 
   .search-wrapper {
     font-size: 12px;
@@ -14,11 +21,21 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    max-width: 229px;
+
+    @include for-phone-only {
+      max-width: none;
+      width: auto;
+      min-height: 52px;
+    }
 
     input {
       all: unset;
       border: none;
       background-color: inherit;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
@@ -26,7 +43,7 @@
     padding: 10px;
     background-color: $background;
     border-radius: 8px;
-    width: 160px;
+    max-width: 160px;
     border: none;
     font-size: 12px;
     color: $secondary-text-color;

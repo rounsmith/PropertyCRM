@@ -3,6 +3,9 @@ import Input from './Input';
 
 const SelectAutoComplete = ({ options, placeholder }) => {
   const styles = {
+    container: (styles, state) => ({
+      maxWidth: 'auto',
+    }),
     control: (baseStyles, state) => ({
       ...baseStyles,
       border: 'none',
@@ -10,7 +13,8 @@ const SelectAutoComplete = ({ options, placeholder }) => {
       color: '#808191',
       fontSize: '12px',
       fontFamily: 'Manrope',
-      width: '160px',
+      minwidth: '160px',
+      maxWidth: 'auto',
       borderRadius: '8px',
       padding: '8px',
     }),

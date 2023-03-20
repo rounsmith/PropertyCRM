@@ -1,6 +1,8 @@
 import React from 'react';
-import styles from '../../styles/components/Properties.module.scss';
 import PropertyCard from './PropertyCard';
+
+import styles from '../../styles/components/Properties.module.scss';
+
 const PropertiesList = () => {
   const properties = [
     {
