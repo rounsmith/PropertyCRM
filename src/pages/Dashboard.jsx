@@ -30,6 +30,7 @@ const Dashboard = () => {
 
   return (
     <div className={styles['dashboard-wrapper']}>
+      <h1>Dashboard</h1>
       <div className={styles['top-dashboard-section']}>
         {cards.map((item) => (
           <Card data={item} key={item.title} />

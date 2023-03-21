@@ -59,9 +59,9 @@ const SideBar = ({ mobileBar, closeSideBar }) => {
       </button>
       <button
         type="button"
-        onClick={() => handleClick('/property')}
+        onClick={() => handleClick('/properties')}
         className={`${styles['sidebar-item']} ${
-          pathname === '/property' ? styles['active'] : ''
+          pathname === '/properties' ? styles['active'] : ''
         }`}
       >
         <svg
@@ -79,7 +79,7 @@ const SideBar = ({ mobileBar, closeSideBar }) => {
             fill="#808191"
           />
         </svg>
-        <span className={`${styles['sidebar-item-text']}`}>Property</span>
+        <span className={`${styles['sidebar-item-text']}`}>Properties</span>
       </button>
       <button
         type="button"

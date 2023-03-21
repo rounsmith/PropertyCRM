@@ -14,7 +14,7 @@
 
     @include for-320-phone-only {
       align-items: flex-start;
-      flex-direction: column;
+      // flex-direction: column;
     }
 
     h1 {
@@ -35,8 +35,16 @@
       transition: all ease 0.3s;
       color: $white;
 
+      @include for-320-phone-only {
+        padding: 10px;
+      }
+
       span {
         font-size: 14px;
+
+        @include for-320-phone-only {
+          font-size: 12px;
+        }
       }
 
       &:hover {
@@ -53,6 +61,10 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
+
+    @include for-320-phone-only {
+      padding: 10px;
+    }
 
     .properties-wrapper {
       display: grid;

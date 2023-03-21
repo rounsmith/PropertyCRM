@@ -11,6 +11,10 @@
     margin: 0;
   }
 
+  @include for-320-phone-only {
+    padding: 15px;
+  }
+
   &::-webkit-scrollbar {
     width: 6px;
 

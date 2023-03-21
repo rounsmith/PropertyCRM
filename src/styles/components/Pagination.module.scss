@@ -5,10 +5,24 @@
   align-items: center;
   justify-content: space-between;
 
+  @include for-phone-only {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .left-data {
+    font-size: 16px;
+
+    @include for-320-phone-only {
+      font-size: 13px;
+    }
+  }
+
   .right-data {
     display: flex;
     align-items: center;
     gap: 10px;
+    background-color: $white;
 
     .pagination {
       display: flex;
@@ -16,10 +30,19 @@
       margin: 0;
       padding: 0;
 
+      @include for-phone-only {
+        padding-bottom: 5px;
+      }
+
       li {
         padding: 7px 15px;
         border-radius: 5px;
         color: $secondary-text-color;
+        font-size: 16px;
+
+        @include for-320-phone-only {
+          font-size: 13px;
+        }
       }
 
       .active {
