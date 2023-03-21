@@ -3,8 +3,8 @@ import Pagination from '../../components/common/Pagination';
 
 import useWindowSize from '../../libs/windowSize';
 
-import Filters from '../../components/Property/Filters';
-import PropertiesList from '../../components/Property/PropertiesList';
+import Filters from '../../components/Properties/Filters';
+import PropertiesList from '../../components/Properties/PropertiesList';
 
 import styles from '../../styles/components/Properties.module.scss';
 

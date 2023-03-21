@@ -3,7 +3,7 @@ import { MdLocationOn } from 'react-icons/md';
 
 import CustomSlider from '../../common/Slider/Slider';
 
-import styles from '../../../styles/components/Property.module.scss';
+import styles from '../../../styles/components/PropertySlider.module.scss';
 
 const PropertiesSlider = () => {
   const properties = [

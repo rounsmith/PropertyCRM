@@ -1,0 +1,56 @@
+@import '../common/vars';
+
+.property-wrapper {
+  display: flex !important;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+
+  .property-image {
+    border-radius: 10px;
+    object-fit: contain;
+  }
+
+  .property-description {
+    display: flex;
+    justify-content: space-between;
+
+    .property-description-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      @include for-320-phone-only {
+        font-size: 12px;
+      }
+
+      .property-name {
+        font-size: 16px;
+        font-weight: 600;
+        color: $primary-text-color;
+        @include for-320-phone-only {
+          font-size: 14px;
+        }
+      }
+
+      .property-location {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+
+        span {
+          color: $secondary-text-color;
+        }
+      }
+    }
+
+    .property-price {
+      padding: 7px 9px;
+      background-color: $secondary-color;
+      color: $hover-text-color;
+      border-radius: 4px;
+      height: fit-content;
+      font-size: 12px;
+    }
+  }
+}
