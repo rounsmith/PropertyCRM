@@ -42,6 +42,10 @@
     display: flex;
     gap: 21px;
 
+    @include for-phone-only {
+      flex-direction: column;
+    }
+
     .property-details {
       flex: 4;
       display: flex;
@@ -51,26 +55,57 @@
       .image-gallery {
         display: flex;
         gap: 20px;
+        width: 100%;
+
+        @include for-phone-only {
+          flex-direction: column;
+        }
 
         .big-image {
-          width: calc(100% - 305px);
-          object-fit: contain;
+          flex: 2;
+          width: 70%;
+          object-fit: cover;
           border-radius: 10px;
+
+          @include for-phone-only {
+            width: 100%;
+          }
         }
 
         .side-images {
           display: flex;
           flex-direction: column;
+          width: 30%;
           gap: 22px;
 
+          @include for-phone-only {
+            flex-direction: row;
+            width: 100%;
+          }
+
           .smaller-image {
-            width: 285px;
-            object-fit: contain;
+            height: 50%;
+            object-fit: cover;
             border-radius: 10px;
+
+            @include for-phone-only {
+              height: inherit;
+              width: 50%;
+            }
           }
 
           .image-overlay {
+            height: 50%;
             position: relative;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+
+            @include for-phone-only {
+              height: auto;
+              width: 50%;
+            }
 
             .more-images-overlay {
               position: absolute;
@@ -102,7 +137,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-            width: calc(100% - 305px);
+            width: 70%;
 
             .property-type {
               font-size: 18px;
@@ -126,6 +161,7 @@
             display: flex;
             flex-direction: column;
             gap: 8px;
+            width: 30%;
 
             .stars {
               display: flex;
@@ -186,7 +222,7 @@
         .description {
           h6 {
             font-size: 18px;
-            font-style: 500;
+            font-weight: 500;
           }
 
           p {
