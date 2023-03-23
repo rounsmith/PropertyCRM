@@ -3,6 +3,17 @@
 .property-card-wrapper {
   display: flex;
   gap: 10px;
+  background: inherit;
+  border: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  padding: 0;
+  transition: all ease 0.3s;
+
+  &:hover {
+    background-color: $bar-gray;
+  }
 
   .property-image {
     width: 300px;
@@ -20,6 +31,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
+    padding: 5px 0;
 
     @include for-phone-only {
       gap: 10px;

@@ -17,6 +17,20 @@
     .back {
       border: unset;
       background-color: inherit;
+
+      svg {
+        border-radius: 20px;
+        padding: 5px;
+        transition: all ease 0.3s;
+
+        &:hover {
+          background-color: $secondary-text-color;
+        }
+      }
+
+      &:hover {
+        opacity: 0.4;
+      }
     }
 
     h4 {
@@ -26,16 +40,20 @@
 
   .property-details-wrapper {
     display: flex;
+    gap: 21px;
 
     .property-details {
       flex: 4;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
 
       .image-gallery {
         display: flex;
         gap: 20px;
 
         .big-image {
-          width: 541px;
+          width: calc(100% - 305px);
           object-fit: contain;
           border-radius: 10px;
         }
@@ -46,7 +64,7 @@
           gap: 22px;
 
           .smaller-image {
-            width: 203px;
+            width: 285px;
             object-fit: contain;
             border-radius: 10px;
           }
@@ -70,10 +88,204 @@
           }
         }
       }
+
+      .details {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+
+        .core-details {
+          display: flex;
+          gap: 20px;
+
+          .property-data {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: calc(100% - 305px);
+
+            .property-type {
+              font-size: 18px;
+              font-style: 500;
+              margin: 0;
+            }
+
+            .property-name {
+              margin: 0;
+              font-size: 22px;
+              font-style: 500;
+            }
+
+            .property-location {
+              font-size: 14px;
+              color: $secondary-text-color;
+            }
+          }
+
+          .property-price {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .stars {
+              display: flex;
+              gap: 8px;
+            }
+
+            .price-text {
+              font-size: 16px;
+              font-weight: 500;
+            }
+
+            .price-data {
+              display: flex;
+              gap: 5px;
+              align-items: flex-end;
+
+              .price {
+                font-size: 28px;
+                font-weight: 700;
+                color: $hover-text-color;
+              }
+
+              .duration {
+                font-size: 16px;
+                color: $secondary-text-color;
+                padding-bottom: 6px;
+              }
+            }
+          }
+        }
+
+        .facility {
+          display: flex;
+          flex-direction: column;
+
+          .amenities {
+            display: grid;
+            grid-column-gap: 64px;
+            grid-row-gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+
+            .amenity {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              gap: 10px;
+              font-size: 14px;
+              font-weight: 500;
+
+              span {
+                width: calc(130px - 24px);
+                text-align: start;
+              }
+            }
+          }
+        }
+
+        .description {
+          h6 {
+            font-size: 18px;
+            font-style: 500;
+          }
+
+          p {
+            font-size: 16px;
+            color: $secondary-text-color;
+          }
+        }
+      }
     }
 
     .right-section {
-      flex: 1;
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .person-wrapper {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 25px 20px 25px;
+        gap: 15px;
+        border: 1px solid $border-color;
+        border-radius: 10px;
+
+        .person {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+
+          .person-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 45px;
+          }
+
+          .person-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0;
+          }
+
+          .person-role {
+            font-size: 14px;
+            font-weight: 400;
+            color: $secondary-text-color;
+          }
+
+          .person-location {
+            font-size: 14px;
+            font-weight: 400;
+            color: $secondary-text-color;
+            display: flex;
+            align-items: center;
+          }
+          .person-properties {
+            font-size: 16px;
+            font-weight: 600;
+          }
+        }
+        button {
+          display: flex;
+          gap: 10px;
+          padding: 10px 15px;
+          color: $white;
+          background-color: $hover-text-color;
+          border-radius: 5px;
+          font-size: 15px;
+          font-weight: 600;
+          border: none;
+        }
+      }
+
+      .map {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+
+        button {
+          width: 100%;
+          border-radius: 10px;
+          padding: 18px;
+          font-size: 18px;
+          font-weight: 600;
+          color: $white;
+          background-color: $hover-text-color;
+          border: none;
+        }
+      }
     }
   }
 }
